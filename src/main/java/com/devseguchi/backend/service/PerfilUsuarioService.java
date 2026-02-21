@@ -19,8 +19,8 @@ public class PerfilUsuarioService {
     private PerfilUsuarioRepository perfilUsuarioRepository;
 
     public List<PerfilUsuarioDTO> listarTodos(){
-        List<PerfilUsuarioEntity> recursos = perfilUsuarioRepository.findAll();
-        return recursos.stream().map(PerfilUsuarioDTO::new).toList();
+        List<PerfilUsuarioEntity> perfilUsuario = perfilUsuarioRepository.findAll();
+        return perfilUsuario.stream().map(PerfilUsuarioDTO::new).toList();
     }
 
     public void inserir(PerfilUsuarioDTO perfilUsuario){
